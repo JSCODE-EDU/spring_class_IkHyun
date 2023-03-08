@@ -30,7 +30,7 @@ HTTP는 OSI 7계층 응용계층에 있는 프로트콜이다. 이 프로트콜�
 |북마크|O|X|
 |캐시|O|X|
 
-### postman으로 원하는 정보를 얻을 수 있는 api 호출하기
+## postman으로 원하는 정보를 얻을 수 있는 api 호출하기
 1. 모든 post들을 조회하기
 ![모든 post](./image/모든%20post.png)
 2. 2번 post 조회하기
@@ -40,3 +40,7 @@ HTTP는 OSI 7계층 응용계층에 있는 프로트콜이다. 이 프로트콜�
 ![3번 post에 대한 comments들 조회2](./image/3번%20post에%20대한%20comments들%20조회2.png)
 4. post 하나 등록하기
 ![post 등록](./image/post%20등록.png)
+
+## (심화) postman으로 공공데이터 api 호출하기
+### 테스트 내용: 대구 달서구 연간 불법주정차 단속 정보 조회
+![공공 데이터 조회 결과](./image/공공데이터%20조회%20결과.png)
