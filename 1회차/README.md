@@ -1,5 +1,4 @@
-# 1주차
-
+# 1회차
 ## 환경 세팅하기 위한 가이드
 1. JDK
 2. IntelliJ or STS
@@ -14,7 +13,10 @@ Sping작업은 IntelliJ Utimate 설치하는 방법 설명 하겠다. 아래 사
 [IntelliJ Utimate - Window](https://jih3508.tistory.com/156)
 
 ## Git 설치하기
-깃 설치하는 방법은 추후에 설명하겠다.
+[깃 설치하기](https://jih3508.tistory.com/157)
+
+## Postman 설치하기
+[Postman](https://jih3508.tistory.com/158)
 
 ## 마무리
  Git 설치부터는 추후에 올릴 예정이고 cmd로 깃 명령어나 브랜치 따는 방법, 소스트리 사용하는 방법은 시간 되면 올리예정이다.
