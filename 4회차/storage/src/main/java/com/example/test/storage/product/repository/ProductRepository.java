@@ -56,8 +56,13 @@ public class ProductRepository {
      * @param product
      * @return
      */
-    public int create(Product product){
-        products.add(product);
+    public int create(Product saveProduct){
+        for(Product product : products){
+            if(saveProduct.getName().isEmpty() || product.getName().equals(saveProduct.getName())){
+                return 0;
+            }
+        }
+        products.add(saveProduct);
         return 1;
     }
 

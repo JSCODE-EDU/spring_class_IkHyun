@@ -24,12 +24,12 @@ public class ProductController {
     }
 
     @GetMapping("")
-    public HttpResponse productFindName(@RequestParam(value = "name", required = false) String name){
+    public HttpResponse productFindName(@RequestParam(value = "name", required = false) String name, @RequestParam(value = "monetaryUnit", required = false) String monetaryUnit){
         log.info(name);
         if(name == null){
             return productService.findAll();
         }
-        return productService.findByName(name);
+        return productService.findByName(name, monetaryUnit);
     }
 
     @PostMapping("")

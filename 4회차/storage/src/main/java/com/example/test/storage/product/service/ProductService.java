@@ -63,9 +63,15 @@ public class ProductService {
      * @param name
      * @return
      */
-    public HttpResponse findByName(String name){
+    public HttpResponse findByName(String name, String monetaryUnit){
         return productRepository.findByName(name)
-                .map(product -> response(product))
+                .map(product -> {
+                    // 달러로 보고 싶을때는 달러로 환율한 결과를 보여준다.
+                    if(monetaryUnit != null && monetaryUnit.equals("dollar")){
+                        product.setPrice(product.getPrice() / 1300);
+                    }
+                    return response(product);
+                })
                 .orElseGet(() -> ERROR("데이터가 없습니다."));
     }
 
@@ -78,9 +84,11 @@ public class ProductService {
         Product saveProduct = Product.builder()
                 .id(productRepository.setID())
                 .name(product.getName())
-                .price(product.getPrice())
+                .price(product.getPrice()) // 저장할때는 원 기준으로 한다.
                 .build();
-        productRepository.create(saveProduct);
+        if(productRepository.create(saveProduct) == 0){
+            return ERROR("같은 상품명이 있습니다.");
+        }
         return response(saveProduct);
     }
 

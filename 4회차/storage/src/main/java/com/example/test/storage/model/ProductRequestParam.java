@@ -12,4 +12,5 @@ public class ProductRequestParam {
 
     private String name;
     private long price;
+
 }

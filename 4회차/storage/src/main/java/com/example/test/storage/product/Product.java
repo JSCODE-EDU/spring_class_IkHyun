@@ -13,5 +13,5 @@ public class Product {
 
     Long id; //  상품 번호
     String name; // 상품명
-    Long price; // 가격
+    long price; // 가격
 }
