@@ -48,7 +48,7 @@ public class ProductRepository {
                 return Optional.of(product);
             }
         }
-        return Optional.ofNullable(null);
+        return Optional.empty();
     }
 
     /**
