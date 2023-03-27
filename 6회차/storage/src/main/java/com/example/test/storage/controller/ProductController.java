@@ -20,7 +20,7 @@ public class ProductController {
         if(name == null || name.isEmpty()){
             return productService.findAll();
         }else if(price == null){
-            return productService.findByAllName(name);
+            return productService.findAllByName(name);
         }
         return productService.findAllByNameAndPrice(name, price);
     }

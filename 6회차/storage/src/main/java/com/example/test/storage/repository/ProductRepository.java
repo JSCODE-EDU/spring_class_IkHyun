@@ -13,7 +13,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Product findAllById(Long id);
 
     @Query("SELECT P FROM Product P WHERE P.name LIKE %:name%")
-    List<Product> findByAllName(String name);
+    List<Product> findAllByName(String name);
 
     @Query("SELECT P FROM Product P WHERE P.name LIKE %:name% AND P.price = :price")
     List<Product> findAllByNameAndPrice(String name, long price);

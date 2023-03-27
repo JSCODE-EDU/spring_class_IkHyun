@@ -25,8 +25,8 @@ public class ProductService {
                 .orElseGet(() -> null);
     }
 
-    public List<Product> findByAllName(String name){
-        return productRepository.findByAllName(name);
+    public List<Product> findAllByName(String name){
+        return productRepository.findAllByName(name);
     }
 
     public List<Product> findAllByNameAndPrice(String name, long price){
